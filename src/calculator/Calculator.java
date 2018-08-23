@@ -13,16 +13,12 @@ class Calculator {
         System.out.println(expression[0]);
         System.out.println(expression[1]);
         System.out.println(expression[2]);
-        System.out.println(expression[3]);
-        System.out.println(expression[4]);
+        //System.out.println(expression[3]);
+        //System.out.println(expression[4]);
         double a = Double.parseDouble(expression[0]);
         double b = Double.parseDouble(expression[2]);
-        if (expression.length < 4) (
 
-            return String.valueOf(result);
-        )
 
-    }
         double result;
 
         switch (expression[1]) {
@@ -40,8 +36,12 @@ class Calculator {
                 break;
             default:
                 return "Error";
-
         }
+
+        if (expression.length < 4) {
+            return String.valueOf(result);
+        }
+
         double c = Double.parseDouble(expression[4]);
         switch (expression[3]) {
             case "+":
@@ -58,7 +58,6 @@ class Calculator {
                 break;
             default:
                 return "Error";
-
         }
 
         return String.valueOf(result);
