@@ -1,0 +1,40 @@
+GridPane {
+    -fx-padding: 2px;
+    -fx-vgap: 2px;
+    -fx-hgap: 2px;
+}
+
+.button,
+.text-container {
+    -fx-max-width: 1000px;
+    -fx-max-height: 1000px;
+}
+
+.button {
+    -fx-font-family: Monospaced;
+    -fx-focus-traversable: false;
+    -fx-font-size: 25px;
+}
+
+.text-container {
+    -fx-border-radius: 3px;
+    -fx-border-color: gray;
+    -fx-border-style: solid;
+    -fx-padding: 5px;
+}
+
+#numberText {
+    -fx-alignment: center-right;
+    -fx-font-family: Monospaced;
+    -fx-font-size: 35px;
+}
+
+#expressionText {
+    -fx-alignment: center-right;
+    -fx-font-family: Monospaced;
+    -fx-font-size: 20px;
+}
+
+#memoryIndicator {
+    -fx-font-size: 7px;
+}

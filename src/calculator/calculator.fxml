@@ -1,0 +1,65 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="calculator.CalculatorController">
+    <stylesheets>
+        <URL value="@styles.css"/>
+    </stylesheets>
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="50"/>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="50"/>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="50"/>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="50"/>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="50"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="NEVER" minHeight="30"/>
+        <RowConstraints vgrow="NEVER" minHeight="50"/>
+        <RowConstraints vgrow="ALWAYS" minHeight="50"/>
+        <RowConstraints vgrow="ALWAYS" minHeight="50"/>
+        <RowConstraints vgrow="ALWAYS" minHeight="50"/>
+        <RowConstraints vgrow="ALWAYS" minHeight="50"/>
+        <RowConstraints vgrow="ALWAYS" minHeight="50"/>
+    </rowConstraints>
+
+    <Button text="0" onAction="#keyPressZero" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <Button text="." onAction="#keyPressDot" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <Button text="&#177;" onAction="#keyPressNeg" GridPane.columnIndex="2" GridPane.rowIndex="6"/>
+    <Button text="=" onAction="#keyPressResult" GridPane.columnIndex="3" GridPane.rowIndex="6" GridPane.columnSpan="2"/>
+
+    <Button text="1" onAction="#keyPressOne" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <Button text="2" onAction="#keyPressTwo" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    <Button text="3" onAction="#keyPressThree" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+    <Button text="&#43;" onAction="#keyPressPlus" GridPane.columnIndex="3" GridPane.rowIndex="5"/>
+    <Button text="&#215;" onAction="#keyPressMultiply" GridPane.columnIndex="4" GridPane.rowIndex="5"/>
+
+    <Button text="4" onAction="#keyPressFour" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <Button text="5" onAction="#keyPressFive" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <Button text="6" onAction="#keyPressSix" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+    <Button text="&#8722;" onAction="#keyPressMinus" GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+    <Button text="&#247;" onAction="#keyPressDivide" GridPane.columnIndex="4" GridPane.rowIndex="4"/>
+
+    <Button text="7" onAction="#keyPressSeven" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <Button text="8" onAction="#keyPressEight" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Button text="9" onAction="#keyPressNine" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+    <Button text="(" onAction="#keyPressOpenBracket" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+    <Button text=")" onAction="#keyPressClosedBracket" GridPane.columnIndex="4" GridPane.rowIndex="3"/>
+
+    <Button text="M+" onAction="#keyPressMemAdd" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <Button text="MR" onAction="#keyPressMemRead" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Button text="MC" onAction="#keyPressMemClear" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+    <Button text="&#8592;" onAction="#keyPressBackspace" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+    <Button text="C" onAction="#keyPressClear" GridPane.columnIndex="4" GridPane.rowIndex="2"/>
+
+    <AnchorPane styleClass="text-container" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="5">
+        <Label fx:id="numberText" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0"
+               AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0"/>
+        <Text fx:id="memoryIndicator" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" text="M"/>
+    </AnchorPane>
+    <AnchorPane styleClass="text-container" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="5">
+        <Label fx:id="expressionText" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0"
+               AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0"/>
+    </AnchorPane>
+
+</GridPane>
