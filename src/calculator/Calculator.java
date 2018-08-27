@@ -43,7 +43,27 @@ class Calculator {
         }
 
         double c = Double.parseDouble(expression[4]);
-        switch (expression[3]) {
+
+        if (expression[1] == "*" && expression[3] == "+") {
+            result = a * b + c;
+        } else if (expression[1] == "*" && expression[3] == "-") {
+            result = a * b - c;
+        } else if (expression[1] == "/" && expression[3] == "+") {
+            result = a / b + c;
+        } else if (expression[1] == "/" && expression[3] == "-") {
+            result = a / b - c;
+        } else if (expression[1] == "/" && expression[3] == "+") {
+            result = a / b + c;
+        } else if (expression[1] == "+" && expression[3] == "*") {
+            result = c * b + a;
+        } else if (expression[1] == "+" && expression[3] == "/") {
+            result = c / b + a;
+        } else if (expression[1] == "-" && expression[3] == "*") {
+            result = a - (c * b);
+        } else if (expression[1] == "-" && expression[3] == "/") {
+            result = a - (b / c);
+        }
+        /*switch (expression[3]) {
             case "+":
                 result = result + c;
                 break;
@@ -58,7 +78,7 @@ class Calculator {
                 break;
             default:
                 return "Error";
-        }
+        }*/
 
         return String.valueOf(result);
 
