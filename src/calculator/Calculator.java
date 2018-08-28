@@ -44,23 +44,21 @@ class Calculator {
 
         double c = Double.parseDouble(expression[4]);
 
-        if (expression[1] == "*" && expression[3] == "+") {
+        if (expression[1].equals("*") && expression[3].equals("+")) {
             result = a * b + c;
-        } else if (expression[1] == "*" && expression[3] == "-") {
+        } else if (expression[1].equals("*") && expression[3].equals("-")) {
             result = a * b - c;
-        } else if (expression[1] == "/" && expression[3] == "+") {
+        } else if (expression[1].equals("/") && expression[3].equals("+")) {
             result = a / b + c;
-        } else if (expression[1] == "/" && expression[3] == "-") {
+        } else if (expression[1].equals("/") && expression[3].equals("-")) {
             result = a / b - c;
-        } else if (expression[1] == "/" && expression[3] == "+") {
-            result = a / b + c;
-        } else if (expression[1] == "+" && expression[3] == "*") {
+        } else if (expression[1].equals("+") && expression[3].equals("*")) {
             result = c * b + a;
-        } else if (expression[1] == "+" && expression[3] == "/") {
+        } else if (expression[1].equals("+") && expression[3].equals("/")) {
             result = c / b + a;
-        } else if (expression[1] == "-" && expression[3] == "*") {
+        } else if (expression[1].equals("-") && expression[3].equals("*")) {
             result = a - (c * b);
-        } else if (expression[1] == "-" && expression[3] == "/") {
+        } else if (expression[1].equals("-") && expression[3].equals("/")) {
             result = a - (b / c);
         }
         /*switch (expression[3]) {
